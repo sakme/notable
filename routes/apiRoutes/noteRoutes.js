@@ -3,8 +3,7 @@ const router = require('express').Router();
 const db = require('../../db/db.json');
 const fs = require('fs');
 const path = require('path');
-
-var currentID = Math.max(...db.map(a => a.id)) + 1;
+const { nanoid } = require('nanoid');
 
 
 // receive get using queries
@@ -16,7 +15,7 @@ router.get('/notes', (req, res) => {
 
 // receive get using params
 router.delete('/notes/:id', (req, res) => {
-    const index = db.findIndex((element) => parseInt(element.id) === parseInt(req.params.id));
+    const index = db.findIndex((element) => element.id === req.params.id);
     
     if (index >= 0) {
         db.splice(index, 1);
@@ -35,10 +34,9 @@ router.delete('/notes/:id', (req, res) => {
 
 // receive post data
 router.post('/notes', (req,res) => {
-    
-    req.body.id = currentID;
-    currentID++;
-    
+
+    req.body.id = nanoid();
+
     // add note to json file and notes array
     db.push(req.body);
     
