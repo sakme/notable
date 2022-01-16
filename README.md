@@ -19,6 +19,12 @@ No installation is required
 
 Try out the application [here](https://fathomless-sea-85603.herokuapp.com/).
 
+Click the + icon to add a new note.
+(public/images/screenshot1.png)
+
+Click the save icon to save it.
+(public/images/screenshot2.png)
+
 ## License
 
 [Licensed under the MIT License](https://opensource.org/licenses/MIT)
