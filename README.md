@@ -20,10 +20,10 @@ No installation is required
 Try out the application [here](https://fathomless-sea-85603.herokuapp.com/).
 
 Click the + icon to add a new note.
-(./public/assets/images/screenshot1.png)
+[!](./public/assets/images/screenshot1.png)
 
 Click the save icon to save it.
-(./public/assets/images/screenshot2.png)
+[!](./public/assets/images/screenshot2.png)
 
 ## License
 
